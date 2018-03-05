@@ -6,11 +6,14 @@ using System.Threading.Tasks;
 
 namespace Aula_03_Ex_01
 {
+    //Classe que representa as pessoas no escopo do nosso programa
     class Pessoa
     {
         private string  nome, profissao;
         private int idade;
         private long identidade;
+        //Cada pessoa pode ter um animal, que será referenciado
+        //pela variável (objeto) 'pet'
         private Animal pet;
 
         public string Falar()
@@ -59,7 +62,10 @@ namespace Aula_03_Ex_01
             {
                 return idade;
             }
-
+            //Note que 'set' permite que o valor a ser atribuído
+            //seja controlado dentro da classe. Isso evita que o
+            //objeto da classe entre em um estado inconsistente.
+            //Ninguém tem menos do que '0' anos de idade!
             set
             {
                 idade = value >= 0 ? value: 0;
