@@ -10,29 +10,26 @@ namespace Aula_04_Ex_01
     {
         static void Main(string[] args)
         {
-            //Instancia as figuras
-            Circulo c = new Circulo(10, 30, 10);
-            TrianguloRetangulo tc = new TrianguloRetangulo(10, 10, 20, 30);
-            Retangulo r = new Retangulo(0, 0, 10, 15);
-            Retangulo q = new Retangulo(10,20, 5, 5);
-            Figura f = new Figura(1,1);
+            Figura[] figuras = new Figura[150];
+            
+            //Povoa o vetor
+            for(int i = 0; i < 50; i++)
+            {
+                figuras[i] = new Circulo(i, i, i + 1);
+                figuras[i + 50] = new TrianguloRetangulo(i, i, i + 1, i + 1);
+                figuras[i + 100] = new Retangulo(i, i, i + 1, i + 1); 
+            }
 
+            double somaArea = 0;
             //Chama o método Area sobrescrito pelas subclasses 
-            c.Area();
-            tc.Area();
-            r.Area();
-            //Chama o método Area da superclasse
-            f.Area();
+            //e acumula os valores das áreas
+            foreach (Figura f in figuras)
+            {
+                Console.WriteLine(f);
+                somaArea += f.Area();
+            }
 
-            //Testa o método isQuadrado para os dois casos
-            r.IsQuadrado();
-            q.IsQuadrado();
-
-            //Imprime o diâmeto do Circulo 'c'.
-            //Note que esse é apenas um exemplo, isso poderia
-            //ser implementado coma property, muito mais elegante.
-            c.Diametro();
-
+            Console.WriteLine("Soma das áreas: " + somaArea);
             Console.Read();
         }
     }

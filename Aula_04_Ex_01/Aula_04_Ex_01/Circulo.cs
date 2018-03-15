@@ -21,14 +21,24 @@ namespace Aula_04_Ex_01
 
         //Sobrescreve o método Area da superclasse Figura. Note que é necessário
         //utilizar o modificador 'override' para indicar a sobreposição.
-        public override void Area()
+        public override double Area()
         {
-            Console.WriteLine("Área circulo: " + Math.PI * Math.Pow(raio,2));
+            return Math.PI * Math.Pow(raio,2);
         }
 
-        public void Diametro()
+        //Funcionalidade de cálculo do diamentro agora implementada como
+        //uma property
+        public double Diametro
         {
-            Console.WriteLine("Diametro: " + 2 * Math.PI * raio);
+            get{return 2 * Math.PI * raio;}
+        }
+
+        //Sobrescreve o ToString já sobrescrito pela classe Figura, adicionando
+        //novas informações sobre o Circulo, mas mantendo o resultado da 
+        //implementação da superclasse (Figura) por meio do método 'base'.
+        public override string ToString()
+        {
+            return base.ToString() + "Raio: " + Raio; 
         }
 
         public double Raio

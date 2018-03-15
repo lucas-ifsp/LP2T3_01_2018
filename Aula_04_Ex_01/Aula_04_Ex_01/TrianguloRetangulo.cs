@@ -21,9 +21,17 @@ namespace Aula_04_Ex_01
 
         //Sobrescreve o método Area da superclasse Figura. Note que é necessário
         //utilizar o modificador 'override' para indicar a sobreposição.
-        public override void Area()
+        public override double Area()
         {
-            Console.WriteLine("Área triangulo retangulo: " +  (baseT * altura)/2);
+            return  (baseT * altura)/2;
+        }
+
+        //Sobrescreve o ToString já sobrescrito pela classe Figura, adicionando
+        //novas informações sobre o TrianguloRetangulo, mas mantendo o resultado da 
+        //implementação da superclasse (Figura) por meio do método 'base'.
+        public override string ToString()
+        {
+            return base.ToString() + "Base: " + BaseT + " Altura: " + Altura;
         }
 
         public double Altura

@@ -19,16 +19,25 @@ namespace Aula_04_Ex_01
             Largura = largura;
         }
 
+
         //Sobrescreve o método Area da superclasse Figura. Note que é necessário
         //utilizar o modificador 'override' para indicar a sobreposição.
-        public override void Area()
+        public override double Area()
         {
-            Console.WriteLine("Área retagulo: "+ largura * comprimento);
+            return largura * comprimento;
         }
 
-        public void IsQuadrado()
+        //Sobrescreve o ToString já sobrescrito pela classe Figura, adicionando
+        //novas informações sobre o Retangulo, mas mantendo o resultado da 
+        //implementação da superclasse (Figura) por meio do método 'base'.
+        public override string ToString()
         {
-            Console.WriteLine(largura == comprimento ? "É um quadrado" : "Não é um quadrado");
+            return base.ToString() + "Cateto 1: " + largura + " Cateto 2: " + comprimento;
+        }
+
+        public bool IsQuadrado()
+        {
+            return largura == comprimento;
         } 
 
         public double Comprimento
