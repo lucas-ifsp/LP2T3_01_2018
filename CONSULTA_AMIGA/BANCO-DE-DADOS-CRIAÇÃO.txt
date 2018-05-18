@@ -1,0 +1,131 @@
+create database consultaamiga;
+
+use consultaamiga;
+
+create table Pessoa
+(
+	cpf varchar(15) not null,
+	nome text not null,
+	data_nasc date,
+	telefone varchar(20),
+	celular varchar(20),
+	sexo char(1),
+	rua text,
+	numero varchar(10),
+	bairro text,
+	estado char(2),
+	cidade varchar(50),
+	cep varchar(20),
+	primary key (cpf)
+) ; 
+
+create table Animal
+(	
+	cpf_resp varchar(15) not null,
+	nome varchar(50) not null,
+	raca varchar(50) not null,
+	especie varchar(50) not null,
+	peso varchar(10),
+	sexo varchar(6),
+	porte varchar(10),
+	data_nasc date,
+	observacoes text,
+	primary key (nome,cpf_resp),
+	foreign key (cpf_resp) references pessoa(cpf) on delete cascade on update cascade	
+) ; 
+
+create table Consulta
+(
+	cpf_resp varchar(15) not null,
+	nome_animal varchar(50) not null,
+	data date not null,
+	horario varchar(10) not null,
+	tipo varchar(15) not null,
+	diagnostico text not null,
+	receita text not null,
+	observacoes text not null,
+	crmv int(6) not null,
+
+	primary key (cpf_resp,nome_animal,data),
+
+	foreign key (cpf_resp) references pessoa(cpf),
+	foreign key (nome_animal) references animal(nome) on delete cascade on update cascade
+);
+
+create table Agenda
+(
+	data date not null,
+	responsavel varchar(50) not null,
+	animal varchar(50) not null,
+	horario varchar(10) not null,
+	tipo varchar(15) not null,
+
+	primary key (data,responsavel,animal)	 
+);
+
+create table Usuario
+(
+	registro integer(1) not null,
+	senha varchar(15),
+	pergunta text,
+
+	primary key (registro)	 
+);
+
+insert into usuario values(1,'user','A senha é user!');
+
+create table Produto
+
+(
+
+	codigo int not null auto_increment,
+
+	nome varchar(50) not null,
+
+	marca varchar(50) not null,
+
+	tipo varchar(13) not null,
+
+	precoCusto varchar(10) not null,
+
+	precoVenda varchar(10) not null,
+
+	descricao text not null,
+	quantidade int not null,
+
+	dosagem varchar(8),
+
+	primary key (codigo)
+
+);
+
+create table Doacao
+(
+	codigo int not null auto_increment,
+	doador varchar(50) not null,
+	data date not null,
+	valor varchar(10) not null,
+	pagamento varchar(10) not null,
+	observacoes text,
+	primary key (codigo)
+);
+
+create table Venda
+(
+	codigo int not null auto_increment,
+	data date not null,
+	consumidor varchar(50),
+	pagamento varchar(10) not null,
+	desconto varchar(10),
+	valor_total varchar(10) not null,
+	primary key (codigo)
+ );
+
+create table ItensVenda
+(
+	codigo_venda int not null,
+	codigo_produto int not null,
+	primary key (codigo_venda,codigo_produto),	
+	foreign key (codigo_venda) references venda(codigo) on delete cascade on update cascade,
+	foreign key (codigo_produto) references produto(codigo) on delete cascade on update cascade
+ );

@@ -1,0 +1,458 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{7C9F1F52-05A4-4271-B67A-5B224173C8E6}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>frmLogin</RootNamespace>
+    <AssemblyName>frmLogin</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Design, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.CrystalReports.TemplateEngine, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="CrystalDecisions.Data.AdoDotNetInterop, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Enterprise.Viewing.ReportSource, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportAppServer.ClientDoc, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportAppServer.CommLayer, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportAppServer.CommonControls, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportAppServer.CommonObjectModel, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportAppServer.Controllers, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportAppServer.CubeDefModel, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportAppServer.DataDefModel, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportAppServer.DataSetConversion, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportAppServer.ObjectFactory, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportAppServer.Prompting, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportAppServer.ReportDefModel, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportAppServer.XmlSerialize, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.VSDesigner, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Web, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="FlashControlV71, Version=1.0.3187.32366, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="MySql.Data, Version=6.9.8.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CLASS\Agenda.cs" />
+    <Compile Include="consultaamigaDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>consultaamigaDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="CrystalReportConsultas.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrystalReportConsultas.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CrystalReportDocaoes.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrystalReportDocaoes.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CrystalReportExtratoConsulta.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrystalReportExtratoConsulta.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CrystalReportExtratoDoacao.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrystalReportExtratoDoacao.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CrystalReportExtratoVenda.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrystalReportExtratoVenda.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CrystalReportVendas.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrystalReportVendas.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DAO\AgendaDAO.cs" />
+    <Compile Include="CLASS\Animal.cs" />
+    <Compile Include="DAO\AnimalDAO.cs" />
+    <Compile Include="CLASS\Consulta.cs" />
+    <Compile Include="CLASS\DataBase.cs" />
+    <Compile Include="CLASS\Doacao.cs" />
+    <Compile Include="DAO\DoacaoDAO.cs" />
+    <Compile Include="fmExtratoConsulta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fmExtratoConsulta.Designer.cs">
+      <DependentUpon>fmExtratoConsulta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fmExtratoDoacao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fmExtratoDoacao.Designer.cs">
+      <DependentUpon>fmExtratoDoacao.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fmExtratoVenda.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fmExtratoVenda.Designer.cs">
+      <DependentUpon>fmExtratoVenda.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORM%27S\fmPesquisarConsultas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORM%27S\fmPesquisarConsultas.Designer.cs">
+      <DependentUpon>fmPesquisarConsultas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fmRelatorioConsultas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fmRelatorioConsultas.Designer.cs">
+      <DependentUpon>fmRelatorioConsultas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fmRelatorioDoacoes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fmRelatorioDoacoes.Designer.cs">
+      <DependentUpon>fmRelatorioDoacoes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fmRelatorioVendas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fmRelatorioVendas.Designer.cs">
+      <DependentUpon>fmRelatorioVendas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORM%27S\fmAgenda.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORM%27S\fmAgenda.Designer.cs">
+      <DependentUpon>fmAgenda.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORM%27S\fmAjuda.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORM%27S\fmAjuda.Designer.cs">
+      <DependentUpon>fmAjuda.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORM%27S\fmAnimal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORM%27S\fmAnimal.Designer.cs">
+      <DependentUpon>fmAnimal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORM%27S\fmConsulta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORM%27S\fmConsulta.Designer.cs">
+      <DependentUpon>fmConsulta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORM%27S\fmDoacao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORM%27S\fmDoacao.Designer.cs">
+      <DependentUpon>fmDoacao.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORM%27S\fmMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORM%27S\fmMenu.Designer.cs">
+      <DependentUpon>fmMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORM%27S\fmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORM%27S\fmLogin.Designer.cs">
+      <DependentUpon>fmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORM%27S\fmPesquisar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORM%27S\fmPesquisar.Designer.cs">
+      <DependentUpon>fmPesquisar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORM%27S\fmPesquisarAnimais.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORM%27S\fmPesquisarAnimais.Designer.cs">
+      <DependentUpon>fmPesquisarAnimais.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORM%27S\fmPesquisarPessoas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORM%27S\fmPesquisarPessoas.Designer.cs">
+      <DependentUpon>fmPesquisarPessoas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORM%27S\fmPesquisarProdutos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORM%27S\fmPesquisarProdutos.Designer.cs">
+      <DependentUpon>fmPesquisarProdutos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORM%27S\fmPessoa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORM%27S\fmPessoa.Designer.cs">
+      <DependentUpon>fmPessoa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORM%27S\fmProduto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORM%27S\fmProduto.Designer.cs">
+      <DependentUpon>fmProduto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fmRelatorios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fmRelatorios.Designer.cs">
+      <DependentUpon>fmRelatorios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORM%27S\fmSaldo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORM%27S\fmSaldo.Designer.cs">
+      <DependentUpon>fmSaldo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORM%27S\fmUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORM%27S\fmUsuario.Designer.cs">
+      <DependentUpon>fmUsuario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORM%27S\fmVenda.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORM%27S\fmVenda.Designer.cs">
+      <DependentUpon>fmVenda.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CLASS\Pessoa.cs" />
+    <Compile Include="DAO\PessoaDAO.cs" />
+    <Compile Include="CLASS\Produto.cs" />
+    <Compile Include="DAO\ProdutoDAO.cs" />
+    <Compile Include="CLASS\Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="CLASS\Realizada.cs" />
+    <Compile Include="DAO\RealizadaDAO.cs" />
+    <Compile Include="CLASS\Usuario.cs" />
+    <Compile Include="DAO\UsuarioDAO.cs" />
+    <Compile Include="CLASS\ValidaCPF.cs" />
+    <Compile Include="CLASS\Venda.cs" />
+    <Compile Include="DAO\VendaDAO.cs" />
+    <EmbeddedResource Include="CrystalReportConsultas.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalReportConsultas.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CrystalReportDocaoes.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalReportDocaoes.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CrystalReportExtratoConsulta.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalReportExtratoConsulta.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CrystalReportExtratoDoacao.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalReportExtratoDoacao.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CrystalReportExtratoVenda.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalReportExtratoVenda.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CrystalReportVendas.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalReportVendas.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fmExtratoConsulta.resx">
+      <DependentUpon>fmExtratoConsulta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fmExtratoDoacao.resx">
+      <DependentUpon>fmExtratoDoacao.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fmExtratoVenda.resx">
+      <DependentUpon>fmExtratoVenda.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fmRelatorioConsultas.resx">
+      <DependentUpon>fmRelatorioConsultas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fmRelatorioVendas.resx">
+      <DependentUpon>fmRelatorioVendas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORM%27S\fmAgenda.resx">
+      <DependentUpon>fmAgenda.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORM%27S\fmAjuda.resx">
+      <DependentUpon>fmAjuda.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORM%27S\fmAnimal.resx">
+      <DependentUpon>fmAnimal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORM%27S\fmConsulta.resx">
+      <DependentUpon>fmConsulta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORM%27S\fmDoacao.resx">
+      <DependentUpon>fmDoacao.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORM%27S\fmMenu.resx">
+      <DependentUpon>fmMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORM%27S\fmLogin.resx">
+      <DependentUpon>fmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORM%27S\fmPesquisar.resx">
+      <DependentUpon>fmPesquisar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORM%27S\fmPesquisarAnimais.resx">
+      <DependentUpon>fmPesquisarAnimais.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORM%27S\fmPesquisarConsultas.resx">
+      <DependentUpon>fmPesquisarConsultas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORM%27S\fmPesquisarPessoas.resx">
+      <DependentUpon>fmPesquisarPessoas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORM%27S\fmPesquisarProdutos.resx">
+      <DependentUpon>fmPesquisarProdutos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORM%27S\fmPessoa.resx">
+      <DependentUpon>fmPessoa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORM%27S\fmProduto.resx">
+      <DependentUpon>fmProduto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fmRelatorioDoacoes.resx">
+      <DependentUpon>fmRelatorioDoacoes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fmRelatorios.resx">
+      <DependentUpon>fmRelatorios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORM%27S\fmSaldo.resx">
+      <DependentUpon>fmSaldo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORM%27S\fmUsuario.resx">
+      <DependentUpon>fmUsuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORM%27S\fmVenda.resx">
+      <DependentUpon>fmVenda.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="app.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="consultaamigaDataSet.xsc">
+      <DependentUpon>consultaamigaDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="consultaamigaDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>consultaamigaDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="consultaamigaDataSet.xss">
+      <DependentUpon>consultaamigaDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1475757417_cat.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1480491657_reload.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1480499951_kcmdrkonqi.ico" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

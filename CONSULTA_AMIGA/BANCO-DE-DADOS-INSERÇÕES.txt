@@ -1,0 +1,76 @@
+insert into pessoa values('402.999.388-59','Everson Cesar Zambon','1990-01-18','(16) 3355-7070','(16) 99988-7070','M','Rua Alamêda Iaia','314','Cupom Uva','SP','São Carlos','13560-540');
+
+insert into pessoa values('402.999.398-20','Everton Cesar Zambon','1990-01-18','(16) 3355-7070','(16) 99944-1220','M','Rua Alamêda Iaia','314','Cupom Uva','SP','São Carlos','13560-540');
+
+insert into pessoa values('123.456.789-09','Ana Laura Martins','1989-04-05','(16) 3377-6060','(16) 99955-2323','F','Rua Nove de Julho','1445A','Jardim Angela','SP','Araraquara','14550-330');
+
+
+insert into animal values('402.999.388-59','Paçoca','Cachorro','SRD','30 Kg','Macho','Médio','2015-02-22','Pelagem da cor preta.');
+
+
+insert into animal values('402.999.388-59','Bacon','Cachorro','Labrador','38 Kg','Macho','Grande','2014-03-10','Pelagem da cor branca.');
+
+insert into animal values('402.999.398-20','Kalel','Cachorro','Boxer','37 Kg','Macho','Grande','2014-04-11','Pelagem da cor preta.');
+
+insert into animal values('402.999.398-20','Zeca','Cachorro','SRD','28 Kg','Macho','Pequeno','2013-12-05','Pelagem da cor "tigrado".');
+
+insert into animal values('123.456.789-09','Sessi','Gato','SRD','25 Kg','Fêmea','Pequeno','2016-02-24','Pelagem da cor cinza.');
+
+
+
+insert into produto(nome,marca,tipo,precoCusto,precoVenda,descricao,quantidade,dosagem) values('Focinheira de Couro','VetPlus','Geral','15','25,9','Focinheira Tamanho M.','10','');
+
+insert into produto(nome,marca,tipo,precoCusto,precoVenda,descricao,quantidade,dosagem) values('Coleira Leevre','Ouro Fino','Geral','30','67,5','Coleira Antiparasitaria.','6','');
+
+insert into produto(nome,marca,tipo,precoCusto,precoVenda,descricao,quantidade,dosagem) values('Endogard','Virbac','Medicamento','12,5','23,75','Vermífugo.','20','100 g');
+
+insert into produto(nome,marca,tipo,precoCusto,precoVenda,descricao,quantidade,dosagem) values('Grantelm','Virbac','Vacina','18','28,99','Antiparasitário Interno.','15','100 ml');
+
+insert into produto(nome,marca,tipo,precoCusto,precoVenda,descricao,quantidade,dosagem) values('Vetflurano','Virbac','Medicamento','10,6','20,3','Anti-Inflamátorio.','25','100 ml');
+
+insert into produto(nome,marca,tipo,precoCusto,precoVenda,descricao,quantidade,dosagem) values('FrontLine','FrontLine','Medicamento','23,5','50,9','Anti Pulgas e Carrapatos.','8','400 ml');
+
+insert into agenda values('2016-12-03','José da Silva','Cachorro','13:30','Rotina');
+
+insert into agenda values('2016-12-03','Ana Laura','Gato','14:00','Retorno');
+
+insert into agenda values('2016-12-03','Everson Zambon','Cachorro','14:45','Cirurgia');
+
+insert into agenda values('2016-12-03','Manuel Pereira','Cachorro','16:30','Rotina');
+
+insert into agenda values('2016-12-17','Maria Aparecida','Cachorro','13:30','Rotina');
+
+insert into agenda values('2016-12-17','Eduardo Monteiro','Cachorro','14:00','Retorno');
+
+insert into agenda values('2016-12-17','Caio dos Santos','Cachorro','14:30','Retorno');
+
+insert into agenda values('2016-12-17','Livia Nunes','Gato','15:00','Rotina');
+
+insert into agenda values('2016-12-24','Monique Mattos','Peixe','13:30','Rotina');
+
+insert into agenda values('2016-12-24','Donizzete Galvão','Cachorro','14:00','Retorno');
+
+insert into agenda values('2016-12-24','Anderson Mota','Gato','14:30','Cirurgia');
+
+insert into agenda values('2016-12-24','Paulo Cesar','Cachorro','16:00','Rotina');
+
+insert into consulta values('402.999.388-59','Paçoca','2016-12-19','14:00','Rotina','Animal apresenta sintomas de gripe. Apresenta um pouco de febre e desidratação.','Uma caixa de GripePet 100 g.','Peso normal.','46350');
+
+insert into consulta values('402.999.388-59','Bacon','2016-12-19','14:00','Rotina','Animal apresenta infestação de pulgas.','Uma frasco de FrontLine 400 ml. Aplicar 1x ao dia.','','46350');
+
+insert into consulta values('402.999.388-59','Paçoca','2016-12-26','14:30','Retorno','Animal apresenta melhoras.','','Ganho de peso.','46350');
+
+insert into consulta values('402.999.398-20','Kalel','2016-12-19','15:00','Rotina','','V10.','Próxima Vacinação - 19-12-2017','46350');
+
+insert into consulta values('402.999.398-20','Zeca','2016-12-19','15:00','Rotina','','V10.','Próxima Vacinação - 19-12-2017','46350');
+
+insert into consulta values('123.456.789-09','Sessi','2016-12-19','15:30','Rotina','Animal com diarréia.','Tomar 1 caixa de Seresto 50g durante 7 dias. Ingerir 3 comp. por dia.','Animal perdeu muito peso.','46350');
+
+insert into doacao(doador,data,valor,pagamento,observacoes) values('0','2016-11-29','200','Dinheiro','');
+
+insert into doacao(doador,data,valor,pagamento,observacoes) values('Multi Ferro','2016-12-29','300','Cheque','Doação feita pela funcionária Mariana Lopes');
+
+insert into doacao(doador,data,valor,pagamento,observacoes) values('0','2016-12-01','50','Dinheiro','');
+insert into doacao(doador,data,valor,pagamento,observacoes) values('402.999.388-59','2016-12-01','100','Débito','');
+
+insert into doacao(doador,data,valor,pagamento,observacoes) values('402.888.233-70','2016-12-01','70','Dinheiro','Doação realizada por Vagner da Silva');
