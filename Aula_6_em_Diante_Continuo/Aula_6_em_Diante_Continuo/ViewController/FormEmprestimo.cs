@@ -20,7 +20,7 @@ namespace Aula_6_em_Diante_Continuo.ViewController
                 if(dgvEmprestimo.RowCount > 0)
                 {
                     EmprestimoDAO eDAO = new EmprestimoDAO();
-                    Console.WriteLine("NUM -> " + dgvEmprestimo.Rows.Count);
+                    //Console.WriteLine("NUM -> " + dgvEmprestimo.Rows.Count);
                     foreach(DataGridViewRow p in dgvEmprestimo.Rows)
                     {
                         Emprestimo emp = new Emprestimo();

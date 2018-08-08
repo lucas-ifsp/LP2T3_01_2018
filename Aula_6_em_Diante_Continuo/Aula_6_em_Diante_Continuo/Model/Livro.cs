@@ -3,10 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Aula_6_em_Diante_Continuo.Util;
 
 namespace Aula_6_em_Diante_Continuo
 {
-    public class Livro
+    public class Livro : IEntity
     {
         private long codigo;
         private string autor, titulo;
@@ -28,6 +29,17 @@ namespace Aula_6_em_Diante_Continuo
         public override string ToString()
         {
             return codigo + " | " + titulo + " | " + autor + " | " + disponivel;
+        }
+
+        public Dictionary<string, string> Atts()
+        {
+            Dictionary<String, String> atts = new Dictionary<string, string>();
+            atts.Add("codigo", Codigo.ToString());
+            atts.Add( "autor", Autor );
+            atts.Add("titulo", Titulo);
+            atts.Add("disponivel", disponivel.ToString());
+
+            return atts;
         }
 
         public long Codigo

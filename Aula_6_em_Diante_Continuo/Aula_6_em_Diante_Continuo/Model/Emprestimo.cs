@@ -10,6 +10,8 @@ namespace Aula_6_em_Diante_Continuo.Model
     {
         private DateTime entrega, devolucao;
         private Livro livro;
+        private long idLivro;
+
         private Usuario usuario;
         private bool finalizado;
         private long codigo;

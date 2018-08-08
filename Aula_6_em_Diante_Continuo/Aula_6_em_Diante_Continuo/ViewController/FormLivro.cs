@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Windows.Forms;
+using Aula_6_em_Diante_Continuo.DAO;
 
 namespace Aula_6_em_Diante_Continuo
 {
@@ -38,6 +39,8 @@ namespace Aula_6_em_Diante_Continuo
         private void btnSalvar_Click(object sender, EventArgs e)
         {
             LivroDAO dao = new LivroDAO();
+            //GenericDAO dao = new GenericDAO();
+
             Console.WriteLine(editMode);
             if (editMode)
                 dao.Update(GetDTO());

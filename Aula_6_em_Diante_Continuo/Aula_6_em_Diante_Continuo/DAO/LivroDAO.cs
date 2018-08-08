@@ -3,10 +3,11 @@ using System.Collections.Generic;
 using System.Data;
 using System.Data.SQLite;
 using System.Windows.Forms;
+using Aula_6_em_Diante_Continuo.DAO;
 
 namespace Aula_6_em_Diante_Continuo
 {
-    class LivroDAO 
+    class LivroDAO : GenericDAO
     {
         private Database bd;
 
@@ -15,7 +16,7 @@ namespace Aula_6_em_Diante_Continuo
             bd = Database.GetInstance();
         }
 
-       public void Save(Livro l)
+       /*public void Save(Livro l)
         {
             String sql = string.Format("INSERT INTO livro(autor,titulo,disponivel) VALUES(@AUTOR,@TITULO,@DISPONIVEL)");
             SQLiteCommand com = new SQLiteCommand(sql);
@@ -25,7 +26,7 @@ namespace Aula_6_em_Diante_Continuo
             com.Parameters.Add(new SQLiteParameter("@DISPONIVEL", l.Disponivel ? 1 : 0));
             
             bd.ExecuteNonQuery(com);
-        }
+        }*/
 
         /*public void Save(Livro l)
         {

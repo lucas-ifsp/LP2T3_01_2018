@@ -91,6 +91,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DAO\EmprestimoDAO.cs" />
+    <Compile Include="DAO\GenericDAO.cs" />
     <Compile Include="DAO\UsuarioDAO.cs" />
     <Compile Include="FormRelatorioLivro.cs">
       <SubType>Form</SubType>
@@ -121,6 +122,7 @@
     <Compile Include="Util\Database.cs" />
     <Compile Include="DAO\LivroDAO.cs" />
     <Compile Include="Old\DatabaseDict.cs" />
+    <Compile Include="Util\IEntity.cs" />
     <Compile Include="ViewController\FormConsultaLivroUsuario.cs">
       <SubType>Form</SubType>
     </Compile>
